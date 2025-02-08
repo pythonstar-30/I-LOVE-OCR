@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMR Generator</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="hc.css">
+</head>
+<body>
+    <div class="top-bar">
+        <a href="price.html">
+            <img src="C:\Users\shrin\Pictures\logo.png" alt="OCR Logo" class="logo">
+        </a>
+        <h1>I ❤️ OCR</h1>
+        <h1 class="rights-text">developed by shrinidhi, 2025 all rights reserved</h1>
+        <button id="downloadButton" style="display:none;">Download Output</button>
+    </div>
+    <div class="container">
+        <div class="left-side">
+            <h2>Upload an Image</h2>
+            <form id="imageForm">
+                <label for="imageInput">Select an Image:</label>
+                <input type="file" id="imageInput" accept="image/*" required>
+                <button type="button" id="processButton">Process Image</button>
+            </form>
+        </div>
+        <div class="right-side">
+            <h2> generate output</h2>
+            <textarea id="ocrOutput" placeholder="OCR Output will appear here..." readonly></textarea>
+            
+        </div>
+    </div>
+    <div class="bottom-bar">
+        <input type="text" placeholder="Search..." id="searchBar">
+        <button id="searchButton">Search</button>
+        <button id="menuButton">
+            <svg width="30" height="30" viewBox="0 0 80 80" fill="black">
+                <rect width="80" height="15"></rect>
+                <rect y="30" width="80" height="15"></rect>
+                <rect y="60" width="80" height="15"></rect>
+            </svg>
+        </button>
+        <div class="dropdown-menu" id="dropdownMenu">
+            <a href="home.html">About Us</a>
+            <a href="#">Services</a>
+            <a href="#">Subscribe</a>
+            <a href="#">Contact Us</a>
+            <a href="price.html">Pricing</a>  
+        </div>
+    </div>
+
+    
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="home.js"></script>
+
+</body>
+</html>
+

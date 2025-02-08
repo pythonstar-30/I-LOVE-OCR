@@ -1,0 +1,208 @@
+/* General Body and HTML */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif; /* Default font */
+    box-sizing: border-box;
+    height: 100%;
+}
+
+/* Top Bar (same as previous) */
+.top-bar {
+    background-color: #612c87;
+    color: white;
+    text-align: center;
+    padding: 8px 0;
+    font-size: 1.3rem;
+    font-family: 'Merriweather', serif;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    letter-spacing: 1px;
+}
+
+.rights-text {
+    font-size: 15px;
+    color: #885688;
+    font-weight: normal;
+}
+
+/* Bottom Bar (same as previous) */
+.bottom-bar {
+    width: 100%;
+    background-color: rgb(107, 16, 139);
+    padding: 15px;
+    display: flex;
+    justify-content: left;
+    gap: 15px;
+    position: relative;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    margin-top: 60px;
+}
+
+/* Pricing Section */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    max-width: 900px;
+    border-collapse: collapse;
+    margin-top: 30px;
+    background-color: #e6ccff; /* Light violet background */
+    color: black; /* Black text */
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #b394c2; /* Softer border */
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+table th {
+    background-color: #b4b2b7; /* Slightly darker violet for headers */
+    color: black; /* Black text */
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #d9b3ff; /* Lighter violet for alternate rows */
+}
+
+table tr:hover {
+    background-color: #f2e6ff; /* Soft violet hover effect */
+}
+
+/* Button inside table */
+table td a.cta {
+    padding: 10px 20px;
+    background-color: #5a009d; /* Dark violet */
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table td a.cta:hover {
+    background-color: #7d3cf7;
+    transform: translateY(-2px);
+}
+
+/* Additional Styles for Top and Bottom Bar Buttons (Same as previous) */
+/* Styling for the dropdown menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    bottom: 50px; /* Adjusts the dropdown position above the menu button */
+    background-color: rgb(176, 117, 236);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+    width: 150px;
+    text-align: center;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdown-menu a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Show menu when active */
+.dropdown-menu.active {
+    display: block;
+}
+
+#menuButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white; /* Inherit white color from the parent */
+    padding: 10px;
+}
+
+#menuButton:hover {
+    background-color: #aa80e5;
+    border-color: #36085d;
+    transform: translateY(-3px); /* Slight lifting effect on hover */
+}
+
+
+/* Button Styling (Top Bar - Download) */
+#downloadButton {
+    position: absolute;
+    top: 10px; /* Adjust the distance from the top */
+    left: 10px; /* Adjust the distance from the left */
+    padding: 12px 25px;
+    background-color: #511d58; /* Background color */
+    color: white;
+    border: 2px solid #b594ba; /* Border color */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    display: flex;
+    align-items: center; /* Aligns icon and text */
+    gap: 10px; /* Space between icon and text */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.side-bar {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #333;
+    padding: 20px;
+    display: flex;
+    flex-direction: column-reverse; /* Reverse order */
+    gap: 15px;
+    border-radius: 10px 0 0 10px;
+}
+
+.side-bar a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.side-bar a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
