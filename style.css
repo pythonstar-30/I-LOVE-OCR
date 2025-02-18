@@ -19,7 +19,29 @@ body, html {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     letter-spacing: 1px; /* Slight letter spacing for modern touch */
 }
+.nav-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    display: flex;
+    gap: 20px;
+}
 
+.nav-menu ul li {
+    display: inline;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+}
+
+.nav-menu ul li a:hover {
+    color: #007bff; /* Highlight effect */
+}
 .rights-text {
     font-size: 15px; /* Make the text smaller */
     color: #885688;  /* Light violet color */
