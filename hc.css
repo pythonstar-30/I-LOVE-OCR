@@ -6,14 +6,8 @@ body, html {
     height: 100%;
     
 }
-.logo {
-    height: 100px; /* Adjust as needed */
-    margin-right: 20px; /* Keep spacing reasonable */
-    margin-left: 10px; /* Pushes it to the leftmost side */
-    cursor: pointer;
-}
-/* Top Bar */
 
+/* Top Bar */
 .top-bar {
     background-color: #612c87;
     color: white;
@@ -25,21 +19,12 @@ body, html {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     letter-spacing: 1px; /* Slight letter spacing for modern touch */
 }
-.nav-menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px; /* Space between menu and search bar */
-    padding: 10px;
-}
-
 .nav-menu ul {
     list-style-type: none;
     padding: 0;
-    margin: 0;
+    margin: 10px 0 0 0;
     display: flex;
     justify-content: center;
-    gap:0;
 }
 
 .nav-menu ul li {
@@ -49,57 +34,25 @@ body, html {
 .nav-menu ul li a {
     text-decoration: none;
     color: white;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
     font-family: 'Roboto', sans-serif;
-    padding: 8px 12px; /* Reduced padding for a smaller look */
-    background-color: #a75de1;
-    border-radius: 5px;
+    padding: 10px 15px;
+    background-color: #a75de1; /* Button color */
+    border-radius: 0; /* Remove rounded corners */
     transition: background 0.3s ease;
     display: inline-block;
+    border-right: 2px solid #e1a0fc; /* Divider between buttons */
+}
+
+.nav-menu ul li a:last-child {
+    border-right: none; /* Remove divider from the last button */
 }
 
 .nav-menu ul li a:hover {
-    background-color: #e1a0fc;
+    background-color: #e1a0fc; /* Darker blue on hover */
 }
 
-/* Small-sized search bar */
-.search-bar {
-    display: flex;
-    align-items: right;
-    border: 1.5px solid #a75de1;
-    border-radius: 5px;
-    padding: 2px 5px;
-    background-color: white;
-    height: 32px; /* Matches button height */
-    margin-left: 140px;
-}
-
-.search-bar input {
-    border: none;
-    outline: none;
-    padding: 2px 5px;
-    font-size: 14px;
-    font-family: 'Roboto', sans-serif;
-    width: 120px; /* Smaller width */
-    height: 24px;
-}
-
-.search-bar button {
-    background-color: #a75de1;
-    color: white;
-    border: none;
-    padding: 3px 8px;
-    font-size: 14px;
-    border-radius: 3px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    height: 24px;
-}
-
-.search-bar button:hover {
-    background-color: #e1a0fc;
-}
 
 .rights-text {
     font-size: 15px; /* Make the text smaller */
@@ -194,8 +147,6 @@ body, html {
 }
 
 /* Right Side (OCR Output) */
-
-
 .right-side {
     flex: 2;
     display: flex;
@@ -211,7 +162,7 @@ body, html {
 /* Textarea for OCR Output */
 .right-side textarea {
     width: 100%;
-    height: 500px; /* Increased height for larger OCR output box */
+    height: 700px; /* Increased height for larger OCR output box */
     padding: 15px;
     border: 3px solid #ddd;
     border-radius: 8px; /* Rounded corners for the textarea */
@@ -221,34 +172,9 @@ body, html {
     margin-bottom: 20px; /* Add some space below the textarea */
 }
 
-/* Container for editor action buttons */
-.editor-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-}
 
-/* Individual button styles */
-.editor-buttons button {
-    padding: 10px 20px;
-    font-size: 14px;
-    background-color: #0f5c08;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
 
-.editor-buttons button:hover {
-    background-color: #a2ddc3; /* Darker purple on hover */
-    transform: scale(1.05); /* Slightly increase size on hover */
-}
 
-.editor-buttons button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-}
 
 /* PDF Icon Style */
 .right-side button i {
@@ -256,22 +182,26 @@ body, html {
 }
 
 .right-side h2 {
-    font-weight: bold;
-    color: rgb(136, 26, 167);
-    
-    
+    font-weight: normal;
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .left-side h2 {
     display: inline-block;
-    padding: 2px 20px;
-    color: rgb(129, 31, 221);
+    padding: 10px 20px;
+    background-color: #86c67c;
+    color: white;
     border-radius: 5px;
     text-align: center;
     cursor: pointer;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
-
+.left-side h2:hover {
+    background-color: #74b06a;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
+}
 
 /* Bottom bar styling */
 .bottom-bar {
@@ -283,7 +213,7 @@ body, html {
     gap: 15px;
     position: relative;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
-    margin-top: 500px; /* Creates space above the bottom bar */
+    margin-top: 25px; /* Creates space above the bottom bar */
 }
 
 /* Styling for the dropdown menu */
@@ -337,9 +267,9 @@ body, html {
 
 /* Button Styling (Top Bar - Download) */
 #downloadButton {
-    position: fixed;  /* Keeps the button at a fixed position on the screen */
-    bottom: 20px; /* Adjust distance from the bottom */
-    right: 20px; /* Adjust distance from the right */
+    position: absolute;
+    top: 10px; /* Adjust the distance from the top */
+    left: 10px; /* Adjust the distance from the left */
     padding: 12px 25px;
     background-color: #511d58; /* Background color */
     color: white;
@@ -349,12 +279,11 @@ body, html {
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Shadow for depth */
-    display: none;  /* Initially hidden */
+    display: flex;
     align-items: center; /* Aligns icon and text */
     gap: 10px; /* Space between icon and text */
     transition: all 0.3s ease; /* Smooth transition for hover effect */
 }
-
 
 /* Hover effect for the download button in top bar */
 #downloadButton:hover {
@@ -365,12 +294,39 @@ body, html {
 
 
 
+#searchButton {
+    
+    top: 10px; /* Adjust the distance from the top */
+    left: 10px; /* Adjust the distance from the left */
+    padding: 12px 25px;
+    background-color: #c298c8; /* Background color */
+    color: white;
+    border: 2px solid #b594ba; /* Border color */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    display: flex;
+    align-items: center; /* Aligns icon and text */
+    gap: 10px; /* Space between icon and text */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for the download button in top bar */
+#searchButton:hover {
+    background-color: #aa80e5;
+    border-color: #cf9ece;
+    transform: translateY(-3px); /* Slight lifting effect on hover */
+}
+
+
 .middle-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 500px;
+    padding: 20px;
     background-color: #f9f9f9; /* Light background for contrast */
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
@@ -404,22 +360,39 @@ body, html {
     margin-bottom: 20px;
 }
 
-/* Progress Bar Container */
-.progress-container {
-    width: 100%;
-    height: 8px;
-    background-color: #ddd; /* Light gray background */
-    border-radius: 5px;
-    margin-top: 10px; /* Space above the bar */
-    display: none; /* Initially hidden */
-    overflow: hidden;
-    position: relative; /* Ensure it stays in the same layout flow */
+.side-bar {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #333;
+    padding: 20px;
+    display: flex;
+    flex-direction: column-reverse; /* Reverse order */
+    gap: 15px;
+    border-radius: 10px 0 0 10px;
 }
 
-/* The Moving Progress Bar */
-.progress-bar {
-    height: 100%;
-    width: 0%;
-    background-color: #22b827; /* Purple progress color */
-    transition: width 0.4s ease-in-out;
+.side-bar a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.side-bar a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+.middle-image {
+    width: 70%; /* Adjust size */
+    max-height: 1200px; /* Prevent it from being too large */
+    display: block;
+    margin: 20px auto; /* Center it */
+    border-radius: 10px; /* Optional: Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Shadow effect */
 }
