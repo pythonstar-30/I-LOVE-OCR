@@ -12,30 +12,26 @@
 </head>
 <body>
     <div class="top-bar">
-        <a href="price.html">
-            <img src="logo.png" alt="OCR Logo" class="logo">
-        </a>
-        <h1>I ❤️ OCR</h1>
-        <button id="downloadButton" style="display:none;">Download Output</button>
-    </div>
-
-    <div class="side-menu" id="sideMenu">
-        <button id="menuButton">
-            <svg width="30" height="30" viewBox="0 0 80 80" fill="black">
-                <rect width="80" height="15"></rect>
-                <rect y="30" width="80" height="15"></rect>
-                <rect y="60" width="80" height="15"></rect>
-            </svg>
-        </button>
-        <div class="dropdown-menu" id="dropdownMenu">
-            <a href="home.html">Home</a>
-            <a href="hci.html">Services</a>
-            <a href="#">Subscribe</a>
-            <a href="price.html">Pricing</a>  
-            <a href="#">Contact Us</a>
+        <h1>
+            <img src="C:\Users\shrin\Pictures\Screenshots\logofinal.png"alt="I ❤️ OCR" style="width: 400px;">
+           
+        </h1>
+        <nav class="nav-menu">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="hci.html">Services</a></li>
+            <li><a href="#">Subscribe</a></li>
+            <li><a href="price.html">Pricing</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button>🔍</button>
         </div>
+        </nav>
+        
     </div>
-
     <div class="container">
         <div class="left-side">
             <h2>Upload an Image</h2>
@@ -43,21 +39,45 @@
                 <label for="imageInput">Select an Image:</label>
                 <input type="file" id="imageInput" accept="image/*" required>
                 <button type="button" id="processButton">Process Image</button>
+                
             </form>
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
         </div>
+        
+        
         <div class="right-side">
-            <h2>Generate Output</h2>
-            <textarea id="ocrOutput" placeholder="OCR Output will appear here..." readonly></textarea>
+            <h2> generate output</h2>
+            <div class="editor-container">
+                <textarea id="ocrOutput" rows="10" cols="50" placeholder="Your OCR text will appear here"></textarea>
+            
+                <!-- Editor Action Buttons -->
+                <div class="editor-buttons">
+                    <button id="cutButton">Cut</button>
+                    <button id="copyButton">Copy</button>
+                    <button id="pasteButton">Paste</button>
+                    <button id="undoButton">Undo</button>
+                    <button id="redoButton">Redo</button>
+                    <button id="saveButton">Save</button>
+                    <button id="downloadButton" style="display:none;">Download as PDF</button>
+                </div>
+            </div>
+            
+            
+            
         </div>
     </div>
-
     <div class="bottom-bar">
-        <h1 class="rights-text">Developed by Shrinidhi, 2025. All rights reserved.</h1>
+        <h1 class="rights-text">developed by shrinidhi, 2025 all rights reserved</h1>
     </div>
 
+    
+    
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="home.js"></script>
+
 </body>
 </html>
-
 
