@@ -25,7 +25,6 @@ body, html {
     margin: 10px 0 0 0;
     display: flex;
     justify-content: center;
-    gap: 15px; /* Spacing between buttons */
 }
 
 .nav-menu ul li {
@@ -40,14 +39,20 @@ body, html {
     font-family: 'Roboto', sans-serif;
     padding: 10px 15px;
     background-color: #a75de1; /* Button color */
-    border-radius: 5px;
+    border-radius: 0; /* Remove rounded corners */
     transition: background 0.3s ease;
     display: inline-block;
+    border-right: 2px solid #e1a0fc; /* Divider between buttons */
+}
+
+.nav-menu ul li a:last-child {
+    border-right: none; /* Remove divider from the last button */
 }
 
 .nav-menu ul li a:hover {
     background-color: #e1a0fc; /* Darker blue on hover */
 }
+
 
 .rights-text {
     font-size: 15px; /* Make the text smaller */
